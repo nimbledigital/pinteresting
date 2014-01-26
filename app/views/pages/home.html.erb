@@ -1,5 +1,10 @@
 <div class="jumbotron">
-<h1>Welcome to my app!</h1>
-<p>Yeah, yeah, yeah. I know there's already a Pinterest. But this was for learnin'.</p>
-<p> Click here to <%= link_to "Sign up", "#", class: "btn btn-primary btn-lg" %></p>
+	<h1>Welcome to my app!</h1>
+	<% if user_signed_in? %>
+	welcome to winning
+	<% else %>
+
+	<p>Yeah, yeah, yeah. I know there's already a Pinterest. But this was for learnin'.</p>
+	<p> Click here to <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+	<% end %>
 </div>
